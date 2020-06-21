@@ -4,7 +4,7 @@ metadata:
   name: azure-disk
 provisioner: kubernetes.io/azure-disk
 parameters:
-  storageaccounttype: Standard_LRS
+  storageaccounttype: Premium_LRS
   kind: Managed
 ---
 apiVersion: v1
@@ -14,7 +14,7 @@ metadata:
   annotations: 
     volume.beta.kubernetes.io/storage-class: azure-disk
 spec:
-  storageClassName: default
+  storageClassName: managed-premium
   accessModes:
     - ReadWriteOnce
   resources:
