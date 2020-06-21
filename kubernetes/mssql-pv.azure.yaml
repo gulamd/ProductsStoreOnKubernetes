@@ -2,7 +2,6 @@ kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
   name: azure-disk
-  namespace: default
 provisioner: kubernetes.io/azure-disk
 parameters:
   storageaccounttype: Standard_LRS
@@ -12,7 +11,6 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: mssql-pvc
-  namespace: default
   annotations: 
     volume.beta.kubernetes.io/storage-class: azure-disk
 spec:
