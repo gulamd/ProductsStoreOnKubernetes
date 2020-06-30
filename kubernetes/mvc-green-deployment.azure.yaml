@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mvc-green
-        image: rgulam94/products-store-mvc:v1.#{Build.BuildId}#
+        image: rgulam94/products-store-mvc-green:v1.#{Build.BuildId}#
         ports:
         - containerPort: 80
         resources:
