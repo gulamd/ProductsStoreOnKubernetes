@@ -28,10 +28,10 @@ spec:
           - name: ConnectionStrings__ProductsContext
             valueFrom:
               configMapKeyRef:
-                name: mssql-connection-configmap
+                name: mssql-connection-configmap-green
                 key: db-connection-string
         #     secretKeyRef:
-        #       name: mssql-secret
+        #       name: mssql-secret-green
         #       key: db-connection-string-secret
 ---
 kind: Service
